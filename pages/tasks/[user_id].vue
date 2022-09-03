@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-between gap-5">
     <div class="flex-1">
       <UiFormsCreateTask @add-task-emit="addTaskEmit" :user_id="user_id"/>
     </div>
@@ -23,13 +23,13 @@
     return data
   })
 
-  const addTaskEmit = (task:Task) => {
-    tasks.value.push(task)
+  const addTaskEmit = async (task:Task) => {
+    await tasks.value.push(task)
   }
 
   const deleteTaskEmit = async (task:Task) => {
     await client.from<Task>('tasks').delete().match({ id: task.id })
 
-      tasks.value = tasks.value.filter(obj => obj.id !== task.id)
+    tasks.value = tasks.value.filter(obj => obj.id !== task.id)
   }
 </script>
