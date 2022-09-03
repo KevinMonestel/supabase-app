@@ -1,6 +1,12 @@
 <template>
-  <div>
-    {{tasks}}
+  <div class="flex justify-between">
+    <div class="flex-1">
+      <UiFormsCreateTask @add-task-emit="addTaskEmit" :user_id="user_id"/>
+    </div>
+
+    <div class="flex-1">
+      <UiListGroupsTasks :tasks="tasks" @delete-task-emit="deleteTaskEmit"/>
+    </div>
   </div>
 </template>
 
@@ -15,7 +21,15 @@
     const { data } = await client.from<Task>('tasks').select('id, description, user_id, created_at').eq('user_id', user_id).order('created_at')
 
     return data
-  }) 
+  })
 
-  console.log(tasks.value)
+  const addTaskEmit = (task:Task) => {
+    tasks.value.push(task)
+  }
+
+  const deleteTaskEmit = async (task:Task) => {
+    await client.from<Task>('tasks').delete().match({ id: task.id })
+
+      tasks.value = tasks.value.filter(obj => obj.id !== task.id)
+  }
 </script>

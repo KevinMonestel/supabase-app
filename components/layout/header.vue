@@ -1,9 +1,9 @@
 <template>
   <header class="bg-white shadow-md py-2">
     <div class="container-app">
-      <div class="flex justify-between">
+      <div class="flex justify-between items-center">
         <div>
-
+          Supabase with Nuxt3
         </div>
 
         <div>

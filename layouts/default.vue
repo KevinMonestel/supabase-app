@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <LayoutHeader/>
-    <main class="container-app mt-5">
-      <slot/>
-    </main>
-  </div>
+  <LayoutHeader/>
+  <main class="container-app mt-5">
+    <slot/>
+  </main>
 </template>
 
 <script setup lang="ts">
