@@ -11,7 +11,7 @@
 }
 
 .container-app{
-  @apply container mx-auto px-36;
+  @apply container mx-auto px-2 lg:px-36;
 }
 
 .nav-link-app{

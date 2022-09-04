@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between gap-5">
+  <div class="flex flex-col lg:flex-row lg:justify-between gap-5">
     <div class="flex-1">
       <UiFormsCreateTask @add-task-emit="addTaskEmit" :user_id="user_id"/>
     </div>
@@ -12,6 +12,10 @@
 
 <script setup lang="ts">
   import { Task } from 'types/task';
+
+  definePageMeta({
+    middleware: ['auth']
+  })
 
   const route = useRoute()
   const client = useSupabaseClient()

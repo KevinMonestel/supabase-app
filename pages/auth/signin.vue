@@ -22,10 +22,13 @@
   const password = ref("")
   const client = useSupabaseClient()
   const user = useSupabaseUser()
+  const route = useRoute()
+
+  let redirect:string = route.query.redirect?.toString() ?? '/'
 
   watchEffect(() => {
     if (user.value) {
-      navigateTo('/')
+      navigateTo(redirect)
     }
   })
 

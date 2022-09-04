@@ -4,7 +4,7 @@
         <p class="text-center text-gray-400">Please, create a new task</p>
       </div>
       <ul class="bg-white rounded-lg border border-gray-200 text-gray-900 w-full">
-        <li v-for="task of tasks" :key="task.id" class="p-2 border-b border-gray-200 rounded-t-lg flex justify-between items-center">
+        <li v-for="task of tasks" :key="task.id" class="p-2 border-b border-gray-200 rounded-t-lg flex flex-col lg:flex-row lg:justify-between lg:items-center">
           <div class="p-1">
             <p>{{task.description}}</p>
             <small class="text-sm text-gray-400">{{task.created_at}} (ID {{task.id}})</small>
