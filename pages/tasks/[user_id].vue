@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { TaskType } from 'types/task';
+import { TaskType } from 'types/task/task';
 
 definePageMeta({
   middleware: ['auth']

@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { SignUpType } from '~~/types/signUp';
+import { SignUpType } from '~~/types/auth/signUp';
 
 const client = useSupabaseClient()
 const user = useSupabaseUser()

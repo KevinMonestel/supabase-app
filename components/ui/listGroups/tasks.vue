@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { TaskType } from '../../../types/task';
+import { TaskType } from '~~/types/task/task';
 
 const props = defineProps({
   tasks: {

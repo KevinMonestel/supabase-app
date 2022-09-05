@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { reset } from '@formkit/core'
-import { TaskType } from '~~/types/task'
+import { TaskType } from '~~/types/task/task'
 
 const client = useSupabaseClient()
 

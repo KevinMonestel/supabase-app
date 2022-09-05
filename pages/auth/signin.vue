@@ -5,12 +5,13 @@
         validation="required" placeholder="example@example.com" />
       <FormKit type="password" name="password" label="Password" help="Please enter your password" validation="required"
         placeholder="******" />
+      <NuxtLink href="/auth/recover" class="text-sm text-blue-400">Recover password</NuxtLink>
     </FormKit>
   </div>
 </template>
 
 <script setup lang="ts">
-import { SignInType } from '~~/types/signIn';
+import { SignInType } from '~~/types/auth/signIn';
 
 const client = useSupabaseClient()
 const user = useSupabaseUser()
