@@ -1,8 +1,8 @@
 <template>
   <div>
-    <LayoutHeader/>
+    <LayoutHeader />
     <main class="container-app mt-5">
-      <slot/>
+      <slot />
     </main>
   </div>
 </template>
