@@ -31,7 +31,7 @@ const boxClassification = {
 }
 
 const buttonClassification = {
-  wrapper: 'mb-1',
+  wrapper: 'my-3',
   input:
     'bg-blue-500 hover:bg-blue-700 text-white text-sm font-normal py-3 px-5 rounded',
 }
